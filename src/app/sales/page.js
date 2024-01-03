@@ -1,30 +1,25 @@
+"use client";
 import SalesGrid from "@/components/Grid/SalesGrid";
-import React from "react";
+import { useEffect, useState } from "react";
+import { fetchData } from "../api/fetchData";
+
 
 const SalesPage = () => {
-  const currentDate = new Date();
-  const formattedDate = currentDate.toISOString().slice(0, 10);
-  const items = [
-    {
-      brand: "The Outnet",
-      date: formattedDate,
-      description: "Clearance (up to 85% off)",
-      linkUrl: "https://www.theoutnet.com/en-us/shop/mens/list/clearance"
-    },
-    {
-      brand: "EcoFash",
-      date: formattedDate,
-      description: "Eco-conscious wrap blazer with tie waist",
-      linkUrl: "https://google.com"
-    },
-  ];
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    const getItems = async () => {
+      const data = await fetchData();
+      setItems(data);
+    };
+
+    getItems();
+  }, []);
 
   return (
-    <>
-      <div className="max-auto mx-20">
+    <div className="max-auto mx-20">
       <SalesGrid items={items} />
-      </div>
-    </>
+    </div>
   );
 };
 
