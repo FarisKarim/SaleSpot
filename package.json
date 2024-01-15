@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "seed": "node -r dotenv/config ./scripts/seed.js"
+    "seed": "node -r dotenv/config ./scripts/seed.js",
+    "listTables": "node -r dotenv/config ./scripts/listTables.js",
+    "checkdb": "node -r dotenv/config ./scripts/checkDb.js"
   },
   "dependencies": {
     "@vercel/postgres": "^0.5.1",
