@@ -5,7 +5,7 @@ const SalesGrid = ({ items }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       {items.map((item, index) => (
-        <div className="max-w-sm p-6 bg-indigo-600 border-4 border-black rounded-lg shadow dark:bg-indigo-800 dark:border-black hover:scale-110 transition-transform">
+        <div key={index} className="max-w-sm p-6 bg-indigo-600 border-4 border-black rounded-lg shadow dark:bg-indigo-800 dark:border-black hover:scale-110 transition-transform">
           <h5 className="text-2xl font-bold tracking-tight text-black dark:text-white">
             {item.brand}
           </h5>
