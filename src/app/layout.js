@@ -8,10 +8,11 @@ const inter = Inter({ subsets: ["latin"] });
 export default function RootLayout({ children }) {
   return (
     <html>
-      <body className={inter.className}>
+      <body className={`${inter.className} flex flex-col min-h-screen`}>
         <Navbar />
-        <div>{children}</div>
-        <Footer className='footer' />
+        <div>{children}
+        </div>
+        <Footer />
       </body>
     </html>
   );

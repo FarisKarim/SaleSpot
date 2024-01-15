@@ -3,13 +3,13 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <>
-      <div className="flex flex-wrap ">
-        <div className="flex items-center w-full lg:w-1/2">
+      <div className="flex">
+        <div className="flex items-center w-full">
           <div>
-            <h1 className="text-4xl font-bold leading-snug tracking-tight text-gray-800 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight dark:text-white">
+            <h1 className="text-4xl font-bold leading-snug tracking-tight text-gray-800 xl:leading-tight dark:text-white">
               The one spot to find where to shop
             </h1>
-            <p className="py-5 text-xl leading-normal text-black-500 lg:text-xl xl:text-2xl dark:text-black-300">
+            <p className="py-5 text-sm leading-normal text-black-500 lg:text-xl xl:text-xl dark:text-black-300">
               SaleSpot curates ongoing brand sales from all over the Internet so
               you don't have to. View brand sales from your favorite clothing
               brands in one place!
@@ -40,7 +40,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-center w-full lg:w-1/2">
+        <div className="flex items-center justify-center border border-emerald-800 w-full">
           <div className="">
             <Image
               src="/bluehero.png"
