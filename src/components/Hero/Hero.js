@@ -40,7 +40,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-center border border-emerald-800 w-full">
+        <div className="flex items-center justify-center w-full">
           <div className="">
             <Image
               src="/bluehero.png"
