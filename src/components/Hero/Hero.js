@@ -18,7 +18,7 @@ const Hero = () => {
             <div className="flex flex-col items-start space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row">
               <a
                 href="/sales"
-                className="inline-flex items-center px-8 py-2 text-sm font-medium text-center text-white bg-indigo-600 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-indigo-600 dark:hover:bg-green-700 dark:focus:ring-green-800 hover:scale-110 transition-transform"
+                className="inline-flex items-center px-8 py-2 text-sm font-medium text-center text-white bg-indigo-600 rounded-lg hover:bg-green-800 focus:outline-none dark:bg-indigo-600 dark:hover:bg-green-700  hover:scale-110 transition-transform"
               >
                 View current sales
                 <svg
