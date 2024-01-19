@@ -14,7 +14,7 @@ const Navbar = () => {
             height={10}
             priority
           />
-          <a href="/" className="font-semibold text-xl xs:text-sm tracking-tight">
+          <a href="/" className="font-semibold text-xl tracking-tight">
             SaleSpot
           </a>
         </div>
