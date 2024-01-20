@@ -2,9 +2,9 @@ import React from "react";
 
 const SalesTable = ({ items }) => {
   return (
-    <div className="flex justify-center border border-indigo-600 items-center">
+    <div className="flex justify-center border-indigo-600 border-4 items-center">
       <div className="overflow-x-auto w-full">
-      <table className="min-w-full divide-y divide-indigo-800 text-center">
+      <table className="min-w-full divide-y text-center">
         <thead className="bg-indigo-80">
           <tr>
             <th className="px-6 py-3 text-center text-xs font-bold uppercase tracking-wider">
@@ -22,16 +22,16 @@ const SalesTable = ({ items }) => {
             {/* Add other headers if needed */}
           </tr>
         </thead>
-        <tbody className="bg-white divide-y divide-black">
+        <tbody className="divide-y divide-black">
           {items.map((item, index) => (
             <tr key={index}>
-              <td className="px-6 py-4 whitespace-nowrap text-sm text-black">
+              <td className="px-6 py-4 whitespace-nowrap text-sm">
                 {item.brand}
               </td>
-              <td className=" px-6 py-4 whitespace-nowrap text-sm text-black">
+              <td className=" px-6 py-4 whitespace-nowrap text-sm">
                 {item.description}
               </td>
-              <td className="xs:hidden px-6 py-4 whitespace-nowrap text-sm text-black">
+              <td className="xs:hidden px-6 py-4 whitespace-nowrap text-sm">
                 {item.date}
               </td>
 

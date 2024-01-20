@@ -1,4 +1,6 @@
 import React from "react";
+import Active from "../Buttons/Active";
+import Inactive from "../Buttons/Inactive";
 
 const SalesGrid = ({ items }) => {
   return (
@@ -9,9 +11,13 @@ const SalesGrid = ({ items }) => {
             key={index}
             className="w-72 sm:w-full p-4 bg-indigo-500 border-4 border-black rounded-lg shadow dark:bg-indigo-600 dark:border-black hover:scale-110 transition-transform"
           >
-            <h5 className="text-lg sm:text-xl font-bold tracking-tight text-white dark:text-white mb-2">
-              {item.brand}
-            </h5>
+            <div className="flex justify-between items-center">
+              <h5 className="text-lg sm:text-xl font-bold tracking-tight text-white dark:text-white">
+                {item.brand}
+              </h5>
+              {/* <div className="bg-gray-400">Hello</div> */}
+              {item.isactive ? <Active /> : <Inactive />}
+            </div>
             <hr className="border border-black-200 dark:border-black-700 mb-2" />
             <div className="h-24 overflow-hidden">
               <p className="text-md sm:text-xl text-gray-100">
