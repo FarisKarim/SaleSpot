@@ -5,11 +5,11 @@ import Inactive from "../Buttons/Inactive";
 const SalesGrid = ({ items }) => {
   return (
     <div className="mx-24 mb-4">
-      <div className="grid xs:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 place-items-center">
+      <div className="grid xs:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 place-items-center">
         {items.map((item, index) => (
           <div
             key={index}
-            className="w-72 sm:w-full p-4 bg-indigo-500 border-4 border-black rounded-lg shadow dark:bg-indigo-600 dark:border-black hover:scale-110 transition-transform"
+            className="w-72 sm:w-full p-4 bg-indigo-600 rounded-lg shadow dark:bg-indigo-600 dark:border-black hover:scale-110 transition-transform"
           >
             <div className="flex justify-between items-center">
               <h5 className="text-lg sm:text-xl font-bold tracking-tight text-white dark:text-white">
