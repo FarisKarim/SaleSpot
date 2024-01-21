@@ -2,6 +2,7 @@
 import SalesGrid from "@/components/Grid/SalesGrid";
 import { useEffect, useState } from "react";
 import SalesTable from "@/components/Table/Table";
+import Search from "@/components/Search/Search";
 
 export async function fetchData() {
   try {
@@ -19,11 +20,11 @@ export async function fetchData() {
 const SalesPage = () => {
   const [items, setItems] = useState([]);
   const [showGrid, setShowGrid] = useState(true);
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     const getItems = async () => {
       let data = await fetchData();
-      // Directly format the dates in the map function
       data = data.map((item) => ({
         ...item,
         date: new Date(item.date).toLocaleDateString("en-US", {
@@ -38,6 +39,13 @@ const SalesPage = () => {
     getItems();
   }, []);
 
+  const handleSearch = (query) => {
+    setSearchQuery(query.toLowerCase());
+  };
+  const filteredItems = items.filter(item =>
+    item.brand.toLowerCase().includes(searchQuery)
+  );
+
   return (
     <div className="max-auto lg:mx-20">
       <div className="flex justify-center">
@@ -48,7 +56,8 @@ const SalesPage = () => {
           {showGrid ? "Show Table View" : "Show Grid View"}
         </button>
       </div>
-      {showGrid ? <SalesGrid items={items} /> : <SalesTable items={items} />}
+      <Search onSearch={handleSearch} />
+      {showGrid ? <SalesGrid items={filteredItems} /> : <SalesTable items={filteredItems} />}
     </div>
   );
 };
