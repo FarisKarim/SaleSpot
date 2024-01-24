@@ -2,7 +2,7 @@ import React from "react";
 
 const SalesTable = ({ items }) => {
   return (
-    <div className="flex justify-center border-indigo-600 border-4 items-center">
+    <div className="flex justify-center border-indigo-600 border-4 items-center mb-4">
       <div className="overflow-x-auto w-full">
         <table className="min-w-full divide-y text-center">
           <thead className="bg-indigo-80">

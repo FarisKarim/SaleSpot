@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image"
+import Image from "next/image";
 
 const Navbar = () => {
   return (
@@ -18,15 +18,17 @@ const Navbar = () => {
             SaleSpot
           </a>
         </div>
-        <div className="flex sm:mx-24 items-center">
-          <div className="text-lg">
-            <a
-              href="/sales"
-              className="text-white hover:text-green-700"
-            >
+        <div className="flex sm:mx-24 gap-4 items-center justify-end">
+          <div className="text-lg xs:text-sm">
+            <a href="/sales" className="text-white hover:text-green-700">
               Brand Sales
             </a>
           </div>
+          <div className="text-lg rounded-lg border px-2 bg-purple-500 hover:scale-110 transition-transform">
+            <a href="/pricing" className="text-white">
+              Premium
+              </a>
+              </div>
         </div>
       </nav>
     </>
