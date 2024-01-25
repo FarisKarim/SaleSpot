@@ -19,7 +19,7 @@ const Navbar = () => {
           </a>
         </div>
         <div className="flex sm:mx-24 gap-4 items-center justify-end">
-          <div className="text-lg xs:text-sm">
+          <div className="text-lg xs:text-sm xs:mr-2 whitespace-nowrap">
             <a href="/sales" className="text-white hover:text-green-700">
               Brand Sales
             </a>
@@ -27,8 +27,8 @@ const Navbar = () => {
           <div className="text-lg rounded-lg border px-2 bg-purple-500 hover:scale-110 transition-transform">
             <a href="/pricing" className="text-white">
               Premium
-              </a>
-              </div>
+            </a>
+          </div>
         </div>
       </nav>
     </>

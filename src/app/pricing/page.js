@@ -1,19 +1,24 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 
 const PricingPage = () => {
-  const [selectedCard, setSelectedCard] = useState(null);
-
-  const cardClasses = (index) =>
-    `relative z-10 flex flex-col items-center w-full p-4 mx-auto my-0 border border-4 ${
-      selectedCard === index ? 'border-blue-600' : 'border-gray-200'
-    } border-solid rounded-lg lg:-mr-3 sm:my-0 sm:p-6 md:my-8 md:p-8 min-h-[300px]`; // Set a minimum height for the cards
-
   const features = {
-    'Free': ['Updated weekly', 'Sales feed'],
-    'Premium': ['Updated daily', 'Email notifications for new sales', 'Advanced filtering options', 'Rare sales'],
-    'Premium+': ['Updated live', 'Info for re-stocks on rare items', 'Feature 3 for Plus']
+    Free: ["Updated daily", "Basic filtering options", "Access to some sales"],
+    Premium: [
+      "Updated live",
+      "Email notifications for new sales",
+      "Advanced filtering options",
+      "Rare sales",
+      "Info for re-stocks on rare items",
+      "Early access to sales",
+      "Access to all sales",
+    ],
   };
+
+  const cardClasses = (plan) =>
+    `flex flex-col items-center w-1/3 my-0 border-4 ${
+      plan === "Premium" ? "border-purple-600" : "border-gray-200"
+    } border-solid rounded-lg lg:-mr-3 sm:my-0 sm:p-6 md:my-8 md:p-8 hover:scale-110 transition-transform`;
 
   return (
     <section className="py-6 leading-7 text-gray-900 sm:py-12 md:py-16">
@@ -30,37 +35,48 @@ const PricingPage = () => {
           </p>
         </div>
 
-        <div
-          className="grid grid-cols-1 gap-4 mt-4 leading-7 text-gray-900 dark:text-white border-0 border-gray-200 sm:mt-6 sm:gap-6 md:mt-8 lg:grid-cols-3 grid-auto-rows:minmax(0, 1fr)" // Use grid-auto-rows for equal height
-        >
-          {['Free', 'Premium', 'Premium+'].map((plan, index) => (
+        <div className="flex xs:flex-col xs:items-center sm:flex-row justify-center gap-10">
+          {Object.entries(features).map(([plan, planFeatures], index) => (
             <div
               key={plan}
-              onClick={() => setSelectedCard(index)}
-              className={cardClasses(index)}
+              className={`flex flex-col py-2 items-center w-8/9 md:w-1/3 my-4 border-4 ${
+                plan === "Premium" ? "border-purple-600" : "border-gray-200"
+              } border-solid rounded-lg lg:-mr-3 sm:my-0 sm:p-6 md:my-8 md:p-8 hover:scale-110 transition-transform`}
             >
-              <h3 className="m-0 text-2xl font-semibold leading-tight tracking-tight border-0 border-gray-200 sm:text-3xl md:text-4xl">
+              <h3 className="text-2xl font-semibold mb-4 tracking-tight sm:text-3xl md:text-4xl dark:text-white">
                 {plan}
               </h3>
-              <div className="flex items-end mt-6 leading-7 border-0 border-gray-200">
-                <p className="box-border m-0 text-6xl font-semibold leading-none border-solid">
-                  ${index === 0 ? '0' : index === 1 ? '29' : '49'}
+              <div className="flex items-end mt-1">
+                <p className="m-0 text-6xl font-semibold leading-none border-solid dark:text-white">
+                  ${plan === "Free" ? "0" : "14"}
                 </p>
-                <p className="box-border m-0 border-solid">
+                <p className="box-border m-0 border-solid dark:text-white">
                   / month
                 </p>
               </div>
-              <ul className="flex-1 p-0 mt-4 ml-5 leading-7 border-0 border-gray-200">
-                {/* Features list can be dynamically generated as per your plan details */}
-                {features[plan].map((feature, featureIndex) => (
-                  <li key={featureIndex} className="inline-flex items-center w-full mb-2 ml-5 font-semibold text-left border-solid">
+              <ul className="flex-1 mt-4">
+                {planFeatures.map((feature, featureIndex) => (
+                  <li
+                    key={featureIndex}
+                    className="inline-flex justify-center w-full mb-2 dark:text-white font-semibold border-solid"
+                  >
                     {feature}
                   </li>
                 ))}
               </ul>
               <a
                 href="#"
-                className="inline-flex justify-center w-full px-4 py-3 mt-8 font-sans text-sm leading-none text-center no-underline bg-green-600 text-white border rounded-md cursor-pointer hover:bg-green-700 hover:border-black focus-within:bg-blue-700 focus-within:border-blue-700 focus-within:text-white sm:text-base md:text-lg hover:scale-110 transition-transform"
+                className={`inline-flex justify-center w-1/2 px-4 py-2 mt-4 font-sans text-sm leading-none text-center no-underline rounded-lg cursor-pointer hover:scale-110 transition-transform ${
+                  plan === "Free"
+                    ? "bg-gray-200 cursor-not-allowed"
+                    : "bg-green-600 hover:bg-green-700 hover:border-black focus-within:bg-blue-700 focus-within:border-blue-700 focus-within:text-white"
+                }`}
+                onClick={(e) => {
+                  if (plan === "Free") {
+                    e.preventDefault();
+                  }
+                  // Add additional logic for handling the click event if necessary
+                }}
               >
                 Purchase
               </a>

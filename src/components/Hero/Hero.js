@@ -41,7 +41,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="flex items-center justify-center w-full">
-          <div className="">
+          <div className="xs:hidden sm:hidden md:block">
             <Image
               src="/bluehero.png"
               width="500"

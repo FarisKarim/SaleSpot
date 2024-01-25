@@ -4,13 +4,13 @@ import Inactive from "../Buttons/Inactive";
 
 const SalesGrid = ({ items }) => {
   return (
-    <div className="relative mx-16 xs:mx-0 mb-4">
-      <div className="max-h-[600px] xs:max-h-[500px] overflow-y-auto no-scrollbar py-8 px-8">
+    <div className="mx-16 xs:mx-0 lg:mx-0">
+      <div className="max-h-[750px] xl:max-h-[800px] xs:max-h-[500px] no-scrollbar overflow-y-auto pt-4 px-8">
         <div className="grid xs:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 place-items-center">
           {items.map((item, index) => (
             <div
               key={index}
-              className="w-72 sm:w-full p-4 bg-indigo-600 rounded-lg shadow dark:bg-indigo-600 dark:border-black hover:scale-110 transition-transform"
+              className="w-72 sm:w-full p-4 bg-indigo-600 rounded-lg shadow dark:bg-indigo-800 dark:border-black hover:scale-110 transition-transform"
             >
               <div className="flex justify-between items-center">
                 <h5 className="text-lg sm:text-xl font-bold tracking-tight text-white dark:text-white">

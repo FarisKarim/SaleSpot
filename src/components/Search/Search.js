@@ -2,7 +2,7 @@ import React from "react";
 
 function Search({onSearch}) {
   return (
-    <div className="flex justify-center items-center my-2">
+    <div className="flex justify-center items-center">
       <div className="relative">
         <input
           className="appearance-none border-2 border-indigo-500 hover:border-gray-400 transition-colors rounded-md py-1 pl-3 pr-10 text-gray-800 focus:outline-none focus:ring-purple-600 focus:border-purple-600 focus:shadow-outline"
