@@ -48,15 +48,15 @@ const SalesPage = () => {
 
   return (
     <div className="max-auto lg:mx-20">
-      <div className="flex mb-2 pt-4 mt-5 gap-4 justify-center">
+      <div className="flex mb-2 pt-4 mt-5 gap-4 xs:flex-col justify-center">
         <button
           onClick={() => setShowGrid(!showGrid)}
-          className="px-2 rounded-lg bg-indigo-600 hover:scale-110 transition-transform text-white text-md hover:bg-green-700 duration-300"
+          className="px-2 rounded-lg xs:w-1/2 xs:mx-auto xs:py-2 border bg-indigo-600 hover:scale-110 transition-transform text-white text-md hover:bg-green-700 duration-300"
         >
           {showGrid ? "Show Table View" : "Show Grid View"}
         </button>
         <Search onSearch={handleSearch} />
-        <div className="flex items-center">
+        <div className="flex justify-center items-center">
           <input
             id="checkbox"
             type="checkbox"

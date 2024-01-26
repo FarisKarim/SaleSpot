@@ -14,12 +14,6 @@ const PricingPage = () => {
       "Access to all sales",
     ],
   };
-
-  const cardClasses = (plan) =>
-    `flex flex-col items-center w-1/3 my-0 border-4 ${
-      plan === "Premium" ? "border-purple-600" : "border-gray-200"
-    } border-solid rounded-lg lg:-mr-3 sm:my-0 sm:p-6 md:my-8 md:p-8 hover:scale-110 transition-transform`;
-
   return (
     <section className="py-6 leading-7 text-gray-900 sm:py-12 md:py-16">
       <div className="box-border px-4 mx-auto border-solid sm:px-6 md:px-6 lg:px-0 max-w-7xl">
@@ -40,7 +34,7 @@ const PricingPage = () => {
             <div
               key={plan}
               className={`flex flex-col py-2 items-center w-8/9 md:w-1/3 my-4 border-4 ${
-                plan === "Premium" ? "border-purple-600" : "border-gray-200"
+                plan === "Premium" ? "border-purple-600" : "border-gray-200 bg-gray-500"
               } border-solid rounded-lg lg:-mr-3 sm:my-0 sm:p-6 md:my-8 md:p-8 hover:scale-110 transition-transform`}
             >
               <h3 className="text-2xl font-semibold mb-4 tracking-tight sm:text-3xl md:text-4xl dark:text-white">

@@ -6,7 +6,7 @@ const Hero = () => {
       <div className="flex">
         <div className="flex items-center w-full">
           <div>
-            <h1 className="text-4xl font-bold leading-snug tracking-tight text-gray-800 xl:leading-tight dark:text-white">
+            <h1 className="text-4xl font-bold leading-snug tracking-tight xl:leading-tight">
               The one spot to find where to shop
             </h1>
             <p className="py-5 text-sm leading-normal text-black-500 lg:text-xl xl:text-xl dark:text-black-300">
@@ -18,7 +18,7 @@ const Hero = () => {
             <div className="flex flex-col items-start space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row">
               <a
                 href="/sales"
-                className="inline-flex items-center px-8 py-2 text-sm font-medium text-center text-white bg-indigo-600 rounded-lg hover:bg-green-800 focus:outline-none dark:bg-indigo-600 dark:hover:bg-green-700  hover:scale-110 transition-transform"
+                className="inline-flex items-center px-8 py-2 text-md font-medium text-center bg-teal-500 text-gray-50 rounded-lg hover:bg-green-800 focus:outline-none dark:hover:bg-green-600  hover:scale-110 transition-transform"
               >
                 View current sales
                 <svg
