@@ -4,8 +4,8 @@ import Image from "next/image";
 const Navbar = () => {
   return (
     <>
-      <nav className="flex sm:mx-16 gap-8 justify-between xs:w-full bg-transparent border-b-4 p-3">
-        <div className="flex items-center gap-1 text-white">
+      <nav className="flex gap-8 justify-between xs:w-full bg-red-700/20 backdrop-blur-lg border-gray-200 p-3">
+        <div className="flex sm:mx-24 items-center gap-1 text-white">
           <Image
             src="/salespotlogo.png"
             alt="SaleSpot Logo"
@@ -14,13 +14,19 @@ const Navbar = () => {
             height={10}
             priority
           />
-          <a href="/" className="font-semibold text-3xl xs:text-lg tracking-tight">
+          <a
+            href="/"
+            className="font-semibold text-3xl xs:text-lg tracking-tight"
+          >
             SaleSpot
           </a>
         </div>
-        <div className="flex gap-8 items-center justify-between">
+        <div className="flex gap-8 sm:mx-24 items-center justify-between">
           <div className="text-lg xs:text-sm xs:mr-2 whitespace-nowrap rounded-lg w-1/2">
-            <a href="/sales" className="text-white text-xl xs:text-sm font-bold hover:text-green-600 ">
+            <a
+              href="/sales"
+              className="text-white text-xl xs:text-sm font-bold hover:text-green-600 "
+            >
               Brand Sales
             </a>
           </div>
