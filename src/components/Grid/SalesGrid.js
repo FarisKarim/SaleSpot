@@ -4,7 +4,7 @@ import Inactive from "../Buttons/Inactive";
 
 const SalesGrid = ({ items }) => {
   return (
-    <div className="mx-16 xs:mx-0 lg:mx-0">
+    <div className="xs:mx-0">
       <div className="max-h-[750px] xl:max-h-[800px] xs:max-h-[500px] no-scrollbar overflow-y-auto pt-4 px-8">
         <div className="grid xs:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 place-items-center">
           {items.map((item, index) => (

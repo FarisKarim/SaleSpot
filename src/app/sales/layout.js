@@ -7,7 +7,7 @@ export default function SalesLayout({ children }) {
       <a className="inline-block border border-black shadow-lg px-4 py-2 rounded-lg text-white hover:scale-110 transition-transform text-3xl xs:text-xl font-semibold p-4 mx-auto">
         Ongoing Sales
       </a>
-      <div className="lg:mx-24">{children}</div>
+      <div>{children}</div>
     </div>
   );
 }
