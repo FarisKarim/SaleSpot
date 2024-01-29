@@ -47,7 +47,7 @@ const SalesPage = () => {
   );
 
   return (
-    <div className="max-auto lg:mx-20">
+    <div className="mx-auto lg:mx-20">
       <div className="flex mb-2 pt-4 mt-5 gap-4 xs:flex-col justify-center">
         <button
           onClick={() => setShowGrid(!showGrid)}
