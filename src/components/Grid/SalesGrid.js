@@ -10,10 +10,10 @@ const SalesGrid = ({ items }) => {
           {items.map((item, index) => (
             <div
               key={index}
-              className="w-72 sm:w-full p-4 bg-indigo-600 rounded-lg shadow dark:bg-indigo-800 dark:border-black hover:scale-110 transition-transform"
+              className="w-72 sm:w-full p-4 bg-transparent shadow-xl border border-black rounded-md dark:bg-indigo-800 dark:border-black hover:scale-110 transition-transform"
             >
               <div className="flex justify-between items-center">
-                <h5 className="text-lg sm:text-xl font-bold tracking-tight text-white dark:text-white">
+                <h5 className="text-lg sm:text-xl font-bold tracking-tight text-gray-800 dark:text-white">
                   {item.brand}
                 </h5>
                 {/* <div className="bg-gray-400">Hello</div> */}

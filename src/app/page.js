@@ -4,12 +4,12 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <main className="flex justify-center p-8 xs:ml-20 xs:mx-0 mx-24">
+      <main className="flex justify-center p-8 xs:mx-0 mx-24">
         <Hero />
         {/* <div>Hello</div> */}
       </main>
       <div className="flex justify-center items-center py-4 mb-4">
-        <h2 className="text-4xl xs:mx-8 font-bold leading-tight">
+        <h2 className="sm:text-2xl md:text-4xl  xs:mx-8 font-bold leading-tight">
           Stay notified of sales from your favorite brands
         </h2>
       </div>

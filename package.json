@@ -12,6 +12,7 @@
     "checkdb": "node -r dotenv/config ./scripts/checkDb.js"
   },
   "dependencies": {
+    "@clerk/nextjs": "^4.29.5",
     "@vercel/postgres": "^0.5.1",
     "dotenv": "^16.3.1",
     "next": "14.0.4",

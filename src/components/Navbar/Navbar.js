@@ -1,7 +1,12 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { UserButton, auth} from "@clerk/nextjs";
 
 const Navbar = () => {
+  const { userId } = auth();
+  const isAuth = !!userId;
+
   return (
     <>
       <nav className="flex gap-8 justify-between xs:w-full bg-red-700/20 backdrop-blur-lg border-gray-200 p-3">
@@ -22,19 +27,37 @@ const Navbar = () => {
           </a>
         </div>
         <div className="flex gap-8 sm:mx-24 items-center justify-between">
-          <div className="text-lg xs:text-sm xs:mr-2 whitespace-nowrap rounded-lg w-1/2">
+          {!isAuth ? (
+            <>
+              <Link className="text-white text-lg font-semibold px-4 py-1 bg-red-300 rounded-lg hover:scale-110 transition-transform whitespace-nowrap" href="/sign-in">Log In</Link>
+              <Link href="/sign-up" className="text-white font-semibold text-lg px-4 py-1 bg-red-300 rounded-lg hover:scale-110 transition-transform whitespace-nowrap">Sign Up</Link>
+            </>
+          ) : (
+            <>
+              <div className="text-lg xs:text-sm xs:mr-2 whitespace-nowrap hover:scale-110 transition-transform rounded-lg w-1/2">
+                <a
+                  href="/sales"
+                  className="text-white border py-1 px-2 rounded-lg shadow-xl text-xl xs:text-sm font-bold"
+                >
+                  Brand Sales
+                </a>
+              </div>
+              <UserButton afterSignOutUrl="/" />
+            </>
+          )}
+          {/* <div className="text-lg xs:text-sm xs:mr-2 whitespace-nowrap rounded-lg w-1/2">
             <a
               href="/sales"
               className="text-white text-xl xs:text-sm font-bold hover:text-green-600 "
             >
               Brand Sales
             </a>
-          </div>
-          <div className="text-lg rounded-lg border px-4 xs:px-2 bg-purple-500 hover:scale-110 transition-transform w-1/2 py-1">
+          </div> */}
+          {/* <div className="text-lg rounded-lg border px-4 xs:px-2 bg-purple-500 hover:scale-110 transition-transform w-1/2 py-1">
             <a href="/pricing" className="text-white">
               Premium
             </a>
-          </div>
+          </div> */}
         </div>
       </nav>
     </>

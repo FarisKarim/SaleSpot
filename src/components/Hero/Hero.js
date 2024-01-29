@@ -3,10 +3,10 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <>
-      <div className="flex">
+      <div className="flex xs:flex-col">
         <div className="flex items-center w-full">
           <div>
-            <h1 className="text-4xl font-bold leading-snug tracking-tight xl:leading-tight">
+            <h1 className="text-4xl xs:mx-0 font-bold leading-snug tracking-tight xl:leading-tight">
               The one spot to find where to shop
             </h1>
             <p className="py-5 text-sm leading-normal text-black-500 lg:text-xl xl:text-xl dark:text-black-300">
@@ -18,7 +18,7 @@ const Hero = () => {
             <div className="flex flex-col items-start space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row">
               <a
                 href="/sales"
-                className="inline-flex items-center px-8 py-2 text-md font-medium text-center bg-teal-500 text-gray-50 rounded-lg hover:bg-green-800 focus:outline-none dark:hover:bg-green-600  hover:scale-110 transition-transform"
+                className="inline-flex items-center px-8 py-2 text-md xs:mb-4 white font-medium text-center bg-teal-500 text-gray-50 rounded-lg hover:bg-green-800 focus:outline-none dark:hover:bg-green-600  hover:scale-110 transition-transform"
               >
                 View current sales
                 <svg
@@ -41,7 +41,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="flex items-center justify-center w-full">
-          <div className="xs:hidden sm:hidden md:block">
+          <div>
             <Image
               src="/bluehero.png"
               width="500"
