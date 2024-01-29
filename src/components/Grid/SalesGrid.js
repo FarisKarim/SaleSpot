@@ -10,10 +10,10 @@ const SalesGrid = ({ items }) => {
           {items.map((item, index) => (
             <div
               key={index}
-              className="w-72 sm:w-full p-4 bg-transparent shadow-xl border border-black rounded-md dark:bg-indigo-800 dark:border-black hover:scale-110 transition-transform"
+              className="w-72 sm:w-full p-4 bg-transparent shadow-xl border border-black rounded-md dark:border-black hover:scale-110 transition-transform"
             >
               <div className="flex justify-between items-center">
-                <h5 className="text-lg sm:text-xl font-bold tracking-tight text-gray-800 dark:text-white">
+                <h5 className="text-lg sm:text-xl border rounded-lg px-2 bg-orange-300 my-2 font-bold tracking-tight text-gray-800">
                   {item.brand}
                 </h5>
                 {/* <div className="bg-gray-400">Hello</div> */}
@@ -21,22 +21,24 @@ const SalesGrid = ({ items }) => {
               </div>
               <hr className="border border-black-200 dark:border-black-700 mb-2" />
               <div className="h-24 overflow-hidden">
-                <p className="text-md sm:text-xl text-gray-100">
+                <p className="text-md text-left font-semibold sm:text-xl text-black">
                   {item.description}
                 </p>
               </div>
-              <p className="text-sm my-4 sm:text-xl text-white dark:text-white-400">
+              <p className="text-sm my-4 text-left sm:text-xl text-white dark:text-white-400">
                 {item.date}
               </p>
-              <a
-                href={item.linkurl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 hover:scale-110 transition-transform"
-              >
-                Link to website
-                {/* SVG icon code here */}
-              </a>
+              <div className="flex">
+                <a
+                  href={item.linkurl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 hover:scale-110 transition-transform"
+                >
+                  Link to website
+                  {/* SVG icon code here */}
+                </a>
+              </div>
             </div>
           ))}
         </div>
