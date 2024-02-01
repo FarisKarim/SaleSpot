@@ -6,7 +6,7 @@ const SalesTable = ({ items }) => {
       <div className="overflow-x-auto w-full">
         <table className="min-w-full divide-y text-center">
           <thead className="bg-indigo-80">
-            <tr className="text-white text-md xs:text-xs">
+            <tr className="text-md xs:text-xs">
               <th className="px-6 py-3 text-center font-bold uppercase tracking-wider">
                 Brand
               </th>

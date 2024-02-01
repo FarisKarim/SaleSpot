@@ -126,7 +126,7 @@ body::-webkit-scrollbar {
   height: 100vh;
   top: 0;
   left: 0;
-  background: #a6c6c9;
+  background: #DFFEFA;
   overflow: hidden;
   z-index: -1;
 }

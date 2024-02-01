@@ -25,7 +25,7 @@ const SalesGrid = ({ items }) => {
                   {item.description}
                 </p>
               </div>
-              <p className="text-sm my-4 text-left sm:text-xl text-white dark:text-white-400">
+              <p className="text-md my-4 text-left xs:text-sm text-black dark:text-white-400">
                 {item.date}
               </p>
               <div className="flex">
