@@ -3,19 +3,8 @@ import SalesGrid from "@/components/Grid/SalesGrid";
 import { useEffect, useState } from "react";
 import SalesTable from "@/components/Table/Table";
 import Search from "@/components/Search/Search";
+import { fetchData } from "@/utils/fetchData";
 
-export async function fetchData() {
-  try {
-    const res = await fetch("/api/items");
-    if (!res.ok) {
-      throw new Error(`Error: ${res.status}`);
-    }
-    const data = await res.json();
-    return data;
-  } catch (error) {
-    return null;
-  }
-}
 
 const SalesPage = () => {
   const [items, setItems] = useState([]);
@@ -74,6 +63,7 @@ const SalesPage = () => {
       )}
     </div>
   );
+  
 };
 
 export default SalesPage;
