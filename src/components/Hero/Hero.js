@@ -6,7 +6,7 @@ const Hero = () => {
       <div className="flex xs:flex-col">
         <div className="flex items-center w-full">
           <div>
-            <h1 className="text-4xl xs:mx-0 font-bold leading-snug tracking-tight xl:leading-tight">
+            <h1 className="text-4xl xs:mx-0 font-bold leading-snug tracking-tight xl:leading-tight dark:text-white">
               One spot to shop.
             </h1>
             <p className="py-5 text-sm leading-normal lg:text-xl xl:text-xl">

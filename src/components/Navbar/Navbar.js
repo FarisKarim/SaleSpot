@@ -9,12 +9,11 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex gap-8 justify-between bg-teal-700 dark:bg-transparent xs:w-full border-gray-200 p-3">
+      <nav className="flex gap-8 justify-between bg-teal-700 dark:bg-transparent dark:backdrop-brightness-110  xs:w-full border-gray-200 p-3">
         <div className="flex sm:mx-24 items-center gap-1">
           <Image
             src="/salespotlogo.png"
             alt="SaleSpot Logo"
-            className="dark:invert"
             width={40}
             height={10}
             priority

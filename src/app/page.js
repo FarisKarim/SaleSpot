@@ -22,7 +22,7 @@ export default function Home() {
           <div className="card landing-page p-4 py-12 my-4 xs:w-full w-1/3 border border-black flex items-center justify-center rounded-lg hover:scale-110 transition-transform">
             <Image src="/adidas.png" alt="Adidas" width={150} height={150} />
           </div>
-          <div className="card bg-gray-200 p-4 my-4 py-12 xs:w-full w-1/3 border border-black flex items-center justify-center rounded-lg hover:scale-110 transition-transform">
+          <div className="card bg-gray-100 p-4 my-4 py-12 xs:w-full w-1/3 border border-black flex items-center justify-center rounded-lg hover:scale-110 transition-transform">
             <Image
               src="/northface.png"
               alt="North Face"
