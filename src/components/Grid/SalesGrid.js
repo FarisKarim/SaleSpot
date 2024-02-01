@@ -10,7 +10,7 @@ const SalesGrid = ({ items }) => {
           {items.map((item, index) => (
             <div
               key={index}
-              className="w-72 sm:w-full p-4 bg-transparent shadow-xl border border-black rounded-md dark:border-black hover:scale-110 transition-transform"
+              className="w-72 sm:w-full p-4 bg-transparent shadow-xl border border-black rounded-md dark:border-white hover:scale-110 transition-transform"
             >
               <div className="flex justify-between items-center">
                 <h5 className="text-lg sm:text-xl border rounded-lg px-2 bg-orange-300 my-2 font-bold tracking-tight text-gray-800">
@@ -21,7 +21,7 @@ const SalesGrid = ({ items }) => {
               </div>
               <hr className="border border-black-200 dark:border-black-700 mb-2" />
               <div className="h-24 overflow-hidden">
-                <p className="text-md text-left font-semibold sm:text-xl text-black">
+                <p className="text-md text-left font-semibold sm:text-xl text-black dark:text-white">
                   {item.description}
                 </p>
               </div>

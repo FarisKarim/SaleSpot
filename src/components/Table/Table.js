@@ -6,7 +6,7 @@ const SalesTable = ({ items }) => {
       <div className="overflow-x-auto w-full">
         <table className="min-w-full divide-y text-center">
           <thead className="bg-indigo-80">
-            <tr className="bg-red-700/20 text-white text-md xs:text-xs">
+            <tr className="text-white text-md xs:text-xs">
               <th className="px-6 py-3 text-center font-bold uppercase tracking-wider">
                 Brand
               </th>
@@ -25,7 +25,7 @@ const SalesTable = ({ items }) => {
           <tbody className="divide-y divide-black">
             {items.map((item, index) => (
               <tr key={index}>
-                <td className="px-6 py-4 whitespace-nowrap text-sm">
+                <td className="px-6 py-4 whitespace-nowrap font-semibold text-sm">
                   {item.brand}
                   <span
                     className={`inline-block ml-3 rounded-full h-2 w-2 ${

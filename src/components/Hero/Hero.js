@@ -7,9 +7,9 @@ const Hero = () => {
         <div className="flex items-center w-full">
           <div>
             <h1 className="text-4xl xs:mx-0 font-bold leading-snug tracking-tight xl:leading-tight">
-              The one spot to find where to shop
+              One spot to shop.
             </h1>
-            <p className="py-5 text-sm leading-normal text-black-500 lg:text-xl xl:text-xl dark:text-black-300">
+            <p className="py-5 text-sm leading-normal lg:text-xl xl:text-xl">
               SaleSpot curates ongoing brand sales from all over the Internet so
               you don't have to. View brand sales from your favorite clothing
               brands in one place!

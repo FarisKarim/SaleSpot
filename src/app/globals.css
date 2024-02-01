@@ -3,8 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-white dark:bg-gray-900;
-  @apply text-black dark:text-white;
+  @apply text-gray-700 dark:text-white;
 }
 tbody tr:nth-child(odd) {
   @apply backdrop-brightness-125 dark:backdrop-brightness-75 /* Tailwind color for bg-blue-100 */;
@@ -33,19 +32,22 @@ body::-webkit-scrollbar {
 }
 
 .card {
-  margin-right: 2rem; 
+  margin-right: 2rem;
 }
 
 .landing-page {
   background-color: hsla(0, 100%, 50%, 1);
-  background-image:
-      radial-gradient(at 40% 20%, hsla(28, 100%, 74%, 1) 0px, transparent 50%),
-      radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 1) 0px, transparent 50%),
-      radial-gradient(at 0% 50%, hsla(355, 100%, 93%, 1) 0px, transparent 50%),
-      radial-gradient(at 80% 50%, hsla(340, 100%, 76%, 1) 0px, transparent 50%),
-      radial-gradient(at 0% 100%, hsla(22, 100%, 77%, 1) 0px, transparent 50%),
-      radial-gradient(at 80% 100%, hsla(242, 100%, 70%, 1) 0px, transparent 50%),
-      radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0px, transparent 50%);
+  background-image: radial-gradient(
+      at 40% 20%,
+      hsla(28, 100%, 74%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, hsla(355, 100%, 93%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, hsla(340, 100%, 76%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(22, 100%, 77%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, hsla(242, 100%, 70%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0px, transparent 50%);
 }
 
 .cl-signIn-root {
@@ -57,8 +59,114 @@ body::-webkit-scrollbar {
   margin: auto;
   margin-top: 2rem;
 }
+.cl-userProfile-root {
+  margin: auto;
+}
 
+@keyframes move {
+  100% {
+    transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
+}
 
-.cl-userButtonAvatarBox {
-  /* margin-bottom: 0rem; */
+.background-night {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: #011919;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.background-night span {
+  width: 37vmin;
+  height: 37vmin;
+  border-radius: 37vmin;
+  backface-visibility: hidden;
+  position: absolute;
+  animation: move;
+  animation-duration: 40;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.background-night span:nth-child(0) {
+  color: #265E58;
+  top: 84%;
+  left: 32%;
+  animation-duration: 36s;
+  animation-delay: -67s;
+  transform-origin: 24vw -10vh;
+  box-shadow: 74vmin 0 9.536666985650024vmin currentColor;
+}
+.background-night span:nth-child(1) {
+  color: #265E58;
+  top: 65%;
+  left: 35%;
+  animation-duration: 10s;
+  animation-delay: -15s;
+  transform-origin: -19vw 2vh;
+  box-shadow: -74vmin 0 9.405120815309905vmin currentColor;
+}
+.background-night span:nth-child(2) {
+  color: #265E58;
+  top: 57%;
+  left: 29%;
+  animation-duration: 89s;
+  animation-delay: -58s;
+  transform-origin: 16vw 24vh;
+  box-shadow: 74vmin 0 10.068726171629105vmin currentColor;
+}
+
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: #a6c6c9;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.background span {
+  width: 37vmin;
+  height: 37vmin;
+  border-radius: 37vmin;
+  backface-visibility: hidden;
+  position: absolute;
+  animation: move;
+  animation-duration: 40;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.background span:nth-child(0) {
+  color: #77caee;
+  top: 84%;
+  left: 32%;
+  animation-duration: 36s;
+  animation-delay: -67s;
+  transform-origin: 24vw -10vh;
+  box-shadow: 74vmin 0 9.536666985650024vmin currentColor;
+}
+.background span:nth-child(1) {
+  color: #76f86d;
+  top: 65%;
+  left: 35%;
+  animation-duration: 10s;
+  animation-delay: -15s;
+  transform-origin: -19vw 2vh;
+  box-shadow: -74vmin 0 9.405120815309905vmin currentColor;
+}
+.background span:nth-child(2) {
+  color: #77caee;
+  top: 57%;
+  left: 29%;
+  animation-duration: 89s;
+  animation-delay: -58s;
+  transform-origin: 16vw 24vh;
+  box-shadow: 74vmin 0 10.068726171629105vmin currentColor;
 }

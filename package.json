@@ -9,18 +9,23 @@
     "lint": "next lint",
     "seed": "node -r dotenv/config ./scripts/seed.js",
     "listTables": "node -r dotenv/config ./scripts/listTables.js",
-    "checkdb": "node -r dotenv/config ./scripts/checkDb.js"
+    "checkdb": "node -r dotenv/config ./scripts/checkDb.js",
+    "seedusers": "node -r dotenv/config ./scripts/createUsers.js",
+    "changeActive":"node -r dotenv/config ./scripts/updateIsActive.js"
   },
   "dependencies": {
     "@clerk/nextjs": "^4.29.5",
     "@vercel/postgres": "^0.5.1",
     "dotenv": "^16.3.1",
+    "localtunnel": "^2.0.2",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
+    "svix": "^1.16.0",
     "vercel": "^33.0.1"
   },
   "devDependencies": {
+    "@types/react": "18.2.48",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.0.4",

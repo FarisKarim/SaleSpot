@@ -51,7 +51,7 @@ const SalesPage = () => {
       <div className="flex mb-2 pt-4 mt-5 gap-4 xs:flex-col justify-center">
         <button
           onClick={() => setShowGrid(!showGrid)}
-          className="px-2 rounded-lg xs:w-1/2 xs:mx-auto xs:py-2 border bg-indigo-600 hover:scale-110 transition-transform text-white text-md hover:bg-green-700 duration-300"
+          className="px-2 rounded-lg xs:w-1/2 xs:mx-auto xs:py-2 border border-black dark:border-white bg-teal-500 hover:scale-110 transition-transform text-white text-md hover:bg-green-700 duration-300"
         >
           {showGrid ? "Show Table View" : "Show Grid View"}
         </button>
