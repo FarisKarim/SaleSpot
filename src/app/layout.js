@@ -3,6 +3,8 @@ import Navbar from "@/components/Navbar/Navbar";
 import DarkMode from "@/components/DarkMode/DarkMode";
 import { Inter } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
+import { Analytics } from '@vercel/analytics/react';
+
 import "./globals.css";
 
 
@@ -22,6 +24,7 @@ export default function RootLayout({ children }) {
           <Navbar />
           <div>{children}</div>
           <Footer />
+          <Analytics />
         </body>
       </html>
     </ClerkProvider>

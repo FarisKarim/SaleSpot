@@ -11,10 +11,12 @@
     "listTables": "node -r dotenv/config ./scripts/listTables.js",
     "checkdb": "node -r dotenv/config ./scripts/checkDb.js",
     "seedusers": "node -r dotenv/config ./scripts/createUsers.js",
-    "changeActive":"node -r dotenv/config ./scripts/updateIsActive.js"
+    "changeActive": "node -r dotenv/config ./scripts/updateIsActive.js",
+    "deleteUser": "node -r dotenv/config ./scripts/deleteUser.js"
   },
   "dependencies": {
     "@clerk/nextjs": "^4.29.5",
+    "@vercel/analytics": "^1.1.2",
     "@vercel/postgres": "^0.5.1",
     "dotenv": "^16.3.1",
     "localtunnel": "^2.0.2",
