@@ -1,5 +1,5 @@
 ## SaleSpot
-- A centralized platform for ongoing brand sales.
+A centralized platform for ongoing brand sales.
 
 ## Demo
 
